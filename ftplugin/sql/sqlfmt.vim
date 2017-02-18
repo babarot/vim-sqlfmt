@@ -1,5 +1,3 @@
-" command! -nargs=* -range=% -complete=file SQLFmt call <SID>sqlfmt(<f-args>)
-
 if !exists('g:sqlfmt_command')
   let g:sqlfmt_command = 'sqlfmt'
 endif

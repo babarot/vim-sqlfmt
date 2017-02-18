@@ -1,31 +1,39 @@
 vim-sqlfmt
-===
+==========
 
-A SQL formatter like GoFmt for vimmers
+A plugin for SQL formatter like gofmt
 
-# Installation
+## Installation
+
+With [vim-plug](https://github.com/junegunn/vim-plug),
+
+```vim
+Plug 'b4b4r07/vim-sqlfmt'
+```
 
 Requirement:
 
-- https://github.com/jackc/sqlfmt
+Avialable plugins | Paste on your `.vimrc`
+---|---
+[jackc/sqlfmt](https://github.com/jackc/sqlfmt) | <pre>let g:sqlfmt_command = "sqlformat"<br>let g:sqlfmt_options = "-r -k upper"</pre>
+[andialbrecht/sqlparse](https://github.com/andialbrecht/sqlparse) | <pre>let g:sqlfmt_command = "sqlformat"<br>let g:sqlfmt_options = "-r -k upper"</pre>
+[henriquebastos/sqlformatter](https://github.com/henriquebastos/sqlformatter) | <pre>let g:sqlfmt_command = "sqlformat"<br>let g:sqlfmt_options = "-r -k upper"</pre>
+... | ...
 
-```console
-$ go get github.com/jackc/sqlfmt/cmd/sqlfmt
-```
+## Usage
 
-# Usage
+Run `:w` to format automatically. If you set `g:sqlfmt_auto` to 0, this behavior will be disabled.
+
+It can also be executed directly as follows:
 
 ```vim
 :SQLFmt [files...]
 ```
 
-By default `jackc/sqlfmt` is used, but if you want to use other formatter (e.g. [andialbrecht/sqlparse](https://github.com/andialbrecht/sqlparse)), set as follows:
+## License
 
-```vim
-let g:sqlfmt_command = "sqlformat"
-let g:sqlfmt_options = "-r -k upper"
-```
+MIT
 
-# License
+## Author
 
-MIT @ b4b4r07
+b4b4r07
